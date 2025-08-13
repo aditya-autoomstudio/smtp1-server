@@ -386,4 +386,6 @@ stage/
 *.lock
 *.pid.lock
 *.sock
-*.socket 
+*.socket .gitconfig
+.lesshst
+.config/
