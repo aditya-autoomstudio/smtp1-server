@@ -237,6 +237,8 @@ CHANGELOG.md
 .cursor-server/
 .cursor/data/
 .cursor/history/
+.cursor-server/data/
+.cursor-server/bin/
 
 # AI and automation files
 *.ai
