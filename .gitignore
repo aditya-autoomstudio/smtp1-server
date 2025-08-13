@@ -1,23 +1,41 @@
 # SMTP Server Repository - .gitignore
+# Comprehensive file exclusion for proper versioning
+
+# =============================================================================
+# BACKUP AND DATA FILES
+# =============================================================================
 
 # Backup files and directories
 /opt/backups/
 /opt/mailcow-backups/
+backup_*/
+backups/
 *.tar.gz
 *.tar.gz.sha256
-backup_*/
+*.tar.bz2
+*.tar.xz
+*.zip
+*.rar
+*.7z
 
 # Log files
 *.log
 /var/log/
 logs/
+log/
 
-# Configuration files with sensitive data
+# =============================================================================
+# SENSITIVE CONFIGURATION FILES
+# =============================================================================
+
+# Environment and configuration files
 .env
 .env.*
 *.conf
 mailcow.conf
 docker-compose.override.yml
+docker-compose.prod.yml
+docker-compose.dev.yml
 
 # SSL certificates and keys
 *.pem
@@ -26,20 +44,52 @@ docker-compose.override.yml
 *.csr
 *.p12
 *.pfx
+*.der
 ssl/
 certs/
+certificates/
+
+# SSH keys and configurations
+.ssh/
+ssh/
+*.pub
+id_rsa*
+id_ed25519*
+id_ecdsa*
+
+# =============================================================================
+# DATABASE FILES
+# =============================================================================
 
 # Database files
 *.db
 *.sqlite
 *.sqlite3
+*.sql
 mysql/
 postgresql/
+mongodb/
+redis/
+
+# =============================================================================
+# DOCKER AND CONTAINER FILES
+# =============================================================================
 
 # Docker volumes and data
 /opt/mailcow-dockerized/data/
 /var/lib/docker/
 docker-volumes/
+volumes/
+containers/
+
+# Docker specific
+.dockerignore
+Dockerfile.prod
+docker-compose.*.yml
+
+# =============================================================================
+# SYSTEM AND OS FILES
+# =============================================================================
 
 # System files
 .DS_Store
@@ -47,63 +97,293 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.directory
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# Shell history and configuration
+.bash_history
+.bashrc
+.zsh_history
+.zshrc
+.profile
+.bash_profile
+.bash_login
+
+# =============================================================================
+# TEMPORARY AND CACHE FILES
+# =============================================================================
 
 # Temporary files
 *.tmp
 *.temp
 *.cache
 cache/
+tmp/
+temp/
+
+# Backup script temporary files
+*.bak
+*.backup
+*.old
+*.orig
+
+# =============================================================================
+# IDE AND EDITOR FILES
+# =============================================================================
 
 # IDE and editor files
 .vscode/
 .idea/
 *.sublime-*
 .atom/
+.vim/
+*.vim
+*.swp
+*.swo
 
-# OS generated files
-.fuse_hidden*
-.directory
-.Trash-*
+# =============================================================================
+# MAILCOW SPECIFIC
+# =============================================================================
 
-# Backup script temporary files
-*.bak
-*.backup
-*.old
-
-# Mailcow specific
+# Mailcow specific directories
 /opt/mailcow-dockerized/log/
 /opt/mailcow-dockerized/data/conf/
 /opt/mailcow-dockerized/data/web/
+/opt/mailcow-dockerized/data/ssl/
+/opt/mailcow-dockerized/data/redis/
+/opt/mailcow-dockerized/data/mysql/
 
-# Sensitive system files
+# =============================================================================
+# SENSITIVE SYSTEM FILES
+# =============================================================================
+
+# System sensitive files
 /etc/shadow
 /etc/passwd
 /etc/group
 /etc/gshadow
 /etc/ssh/ssh_host_*
+/etc/ssl/
+/etc/letsencrypt/
+
+# =============================================================================
+# MONITORING AND ALERTING
+# =============================================================================
 
 # Monitoring and alert files
 monitoring/
 alerts/
 health-checks/
+metrics/
+prometheus/
+grafana/
+
+# =============================================================================
+# DEVELOPMENT AND BUILD FILES
+# =============================================================================
 
 # Development files
 node_modules/
 vendor/
 composer.lock
 package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+dist/
+build/
+target/
+out/
+
+# =============================================================================
+# TESTING FILES
+# =============================================================================
 
 # Test files
 test/
 tests/
 *.test
 *.spec
+coverage/
+.nyc_output/
+.coverage
+
+# =============================================================================
+# DOCUMENTATION AND NOTES
+# =============================================================================
 
 # Documentation drafts
 docs/drafts/
 *.md.bak
+*.md.tmp
 
-# Personal notes
+# Personal notes and temporary docs
 notes/
 TODO.md
-CHANGELOG.md 
+CHANGELOG.md
+*.todo
+*.note
+
+# =============================================================================
+# CURSOR AND AI TOOLS
+# =============================================================================
+
+# Cursor IDE files
+.cursor/
+.cursor-server/
+.cursor-rules/
+
+# AI and automation files
+*.ai
+*.ml
+*.model
+
+# =============================================================================
+# CLOUD AND DEPLOYMENT
+# =============================================================================
+
+# Cloud configuration
+.gcloud/
+.aws/
+.azure/
+terraform/
+*.tfstate
+*.tfstate.backup
+
+# Deployment files
+deploy/
+deployment/
+*.deploy
+*.prod
+*.staging
+
+# =============================================================================
+# SENDGRID AND EMAIL SERVICES
+# =============================================================================
+
+# SendGrid specific
+sendgrid/
+sendgrid_*
+*.sendgrid
+sendgrid_integration.sh
+update_sendgrid_relay.sh
+
+# =============================================================================
+# SCRIPT VARIATIONS AND TEMPORARY FILES
+# =============================================================================
+
+# Script variations
+*_fixed.sh
+*_backup.sh
+*_restore.sh
+*_setup.sh
+*_monitor.sh
+*_cleanup.sh
+
+# Temporary script files
+check_*
+cleanup_*
+monitor_*
+setup_*
+
+# =============================================================================
+# SNAP AND PACKAGE MANAGERS
+# =============================================================================
+
+# Snap packages
+snap/
+*.snap
+
+# Package manager files
+*.deb
+*.rpm
+*.pkg
+
+# =============================================================================
+# GIT AND VERSION CONTROL
+# =============================================================================
+
+# Git specific (if any)
+.git/
+.gitignore.bak
+.gitattributes.bak
+
+# =============================================================================
+# SECURITY AND COMPLIANCE
+# =============================================================================
+
+# Security scan results
+*.security
+*.vuln
+*.audit
+security_scan/
+vulnerability_scan/
+
+# Compliance files
+compliance/
+*.compliance
+*.audit
+
+# =============================================================================
+# PERFORMANCE AND DEBUGGING
+# =============================================================================
+
+# Performance files
+*.perf
+*.profile
+*.trace
+profiling/
+
+# Debug files
+*.debug
+debug/
+*.core
+*.dump
+
+# =============================================================================
+# NETWORK AND FIREWALL
+# =============================================================================
+
+# Network configuration
+network/
+firewall/
+*.firewall
+*.network
+
+# =============================================================================
+# BACKUP SYSTEM SPECIFIC
+# =============================================================================
+
+# Backup system files that shouldn't be versioned
+BACKUP_SETUP_COMPLETE.md
+SENDGRID_SETUP.md
+mailcow_backup_strategy.md
+
+# =============================================================================
+# ENVIRONMENT SPECIFIC
+# =============================================================================
+
+# Environment specific files
+production/
+staging/
+development/
+local/
+dev/
+prod/
+stage/
+
+# =============================================================================
+# MISC FILES
+# =============================================================================
+
+# Any other files that shouldn't be versioned
+*.pid
+*.lock
+*.pid.lock
+*.sock
+*.socket 
