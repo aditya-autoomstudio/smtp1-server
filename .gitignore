@@ -230,13 +230,8 @@ CHANGELOG.md
 *.note
 
 # =============================================================================
-# CURSOR AND AI TOOLS
+# AI AND AUTOMATION TOOLS
 # =============================================================================
-
-# Cursor IDE files
-.cursor/
-.cursor-server/
-.cursor-rules/
 
 # AI and automation files
 *.ai
