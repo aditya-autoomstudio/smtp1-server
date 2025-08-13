@@ -233,12 +233,35 @@ CHANGELOG.md
 # CURSOR AND AI TOOLS
 # =============================================================================
 
-# Cursor IDE files (excluding history and data)
+# Cursor IDE files (excluding .cursor/rules directory)
 .cursor-server/
 .cursor/data/
 .cursor/history/
-.cursor-server/data/
-.cursor-server/bin/
+.cursor/settings/
+.cursor/extensions/
+.cursor/workspace/
+.cursor/debug/
+.cursor/logs/
+.cursor/cache/
+.cursor/temp/
+.cursor/backup/
+.cursor/state/
+.cursor/globalStorage/
+.cursor/user-data/
+.cursor/workspaceStorage/
+.cursor/User/
+.cursor/User/globalStorage/
+.cursor/User/workspaceStorage/
+.cursor/User/settings/
+.cursor/User/keybindings/
+.cursor/User/snippets/
+.cursor/User/tasks/
+.cursor/User/launch.json
+.cursor/User/settings.json
+.cursor/User/keybindings.json
+.cursor/User/tasks.json
+.cursor/User/extensions.json
+.cursor/User/profiles/
 
 # AI and automation files
 *.ai
