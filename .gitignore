@@ -1,0 +1,109 @@
+# SMTP Server Repository - .gitignore
+
+# Backup files and directories
+/opt/backups/
+/opt/mailcow-backups/
+*.tar.gz
+*.tar.gz.sha256
+backup_*/
+
+# Log files
+*.log
+/var/log/
+logs/
+
+# Configuration files with sensitive data
+.env
+.env.*
+*.conf
+mailcow.conf
+docker-compose.override.yml
+
+# SSL certificates and keys
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+ssl/
+certs/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+mysql/
+postgresql/
+
+# Docker volumes and data
+/opt/mailcow-dockerized/data/
+/var/lib/docker/
+docker-volumes/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+.atom/
+
+# OS generated files
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Backup script temporary files
+*.bak
+*.backup
+*.old
+
+# Mailcow specific
+/opt/mailcow-dockerized/log/
+/opt/mailcow-dockerized/data/conf/
+/opt/mailcow-dockerized/data/web/
+
+# Sensitive system files
+/etc/shadow
+/etc/passwd
+/etc/group
+/etc/gshadow
+/etc/ssh/ssh_host_*
+
+# Monitoring and alert files
+monitoring/
+alerts/
+health-checks/
+
+# Development files
+node_modules/
+vendor/
+composer.lock
+package-lock.json
+
+# Test files
+test/
+tests/
+*.test
+*.spec
+
+# Documentation drafts
+docs/drafts/
+*.md.bak
+
+# Personal notes
+notes/
+TODO.md
+CHANGELOG.md 
