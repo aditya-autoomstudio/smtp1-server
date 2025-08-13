@@ -389,3 +389,4 @@ stage/
 *.socket .gitconfig
 .lesshst
 .config/
+.gitconfig
