@@ -1,0 +1,1155 @@
+{
+    "nodes": [
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8",
+            "mode": "list",
+            "cachedResultName": "Email Campaign"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 879068707,
+            "mode": "list",
+            "cachedResultName": "Campaign 19th Aug 2025",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8/edit#gid=879068707"
+          },
+          "options": {}
+        },
+        "id": "9be1c44d-2e2e-4b14-ab4d-9fda37c5446f",
+        "name": "Read Company Headers & Data",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4,
+        "position": [
+          -1712,
+          688
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LXQcjPk0elGpErWs",
+            "name": "Email_auto_responder"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8",
+            "mode": "list",
+            "cachedResultName": "Email Campaign"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 879068707,
+            "mode": "list",
+            "cachedResultName": "Campaign 19th Aug 2025",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8/edit#gid=879068707"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "Company": "={{ $('Read Company Headers & Data').item.json.Company }}",
+              "Intro Email": "={{ $json.plain_text }}"
+            },
+            "matchingColumns": [
+              "Company"
+            ],
+            "schema": [
+              {
+                "id": "Company",
+                "displayName": "Company",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Type Of Business",
+                "displayName": "Type Of Business",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Contact Name",
+                "displayName": "Contact Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Designation",
+                "displayName": "Designation",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Phone Number",
+                "displayName": "Phone Number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "CIN",
+                "displayName": "CIN",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Location",
+                "displayName": "Location",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Website",
+                "displayName": "Website",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Intro Email",
+                "displayName": "Intro Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "displayName": "Status",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {
+            "cellFormat": "USER_ENTERED"
+          }
+        },
+        "id": "4e724df5-0bb6-47a6-b40a-5bc8dd9d7167",
+        "name": "Update Intro Email Field",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4,
+        "position": [
+          336,
+          352
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LXQcjPk0elGpErWs",
+            "name": "Email_auto_responder"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8",
+            "mode": "list",
+            "cachedResultName": "Email Campaign"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 879068707,
+            "mode": "list",
+            "cachedResultName": "Campaign 19th Aug 2025",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8/edit#gid=879068707"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "Company": "={{ $('Read Company Headers & Data').item.json.Company }}",
+              "Status": "=Sent at {{new Date().toString()}}"
+            },
+            "matchingColumns": [
+              "Company"
+            ],
+            "schema": [
+              {
+                "id": "Company",
+                "displayName": "Company",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Type Of Business",
+                "displayName": "Type Of Business",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Contact Name",
+                "displayName": "Contact Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Designation",
+                "displayName": "Designation",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Phone Number",
+                "displayName": "Phone Number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "CIN",
+                "displayName": "CIN",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Location",
+                "displayName": "Location",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Website",
+                "displayName": "Website",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Intro Email",
+                "displayName": "Intro Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Status",
+                "displayName": "Status",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {
+            "cellFormat": "USER_ENTERED"
+          }
+        },
+        "id": "0196d596-bd3d-495f-9061-3ef3f6f1ac12",
+        "name": "Update Status: Sent",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4,
+        "position": [
+          688,
+          496
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LXQcjPk0elGpErWs",
+            "name": "Email_auto_responder"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8",
+            "mode": "list",
+            "cachedResultName": "Email Campaign"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 879068707,
+            "mode": "list",
+            "cachedResultName": "Campaign 19th Aug 2025",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ng0S5Y1lfjXoAmthCGIml0UH3QRo4UZ99okNNIPY6z8/edit#gid=879068707"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "row_number": 0,
+              "Company": "={{ $('Read Company Headers & Data').item.json.Company }}",
+              "Status": "=Not Sent, \ncheck flow, \nprocessed at  {{new Date().toString()}}"
+            },
+            "matchingColumns": [
+              "Company"
+            ],
+            "schema": [
+              {
+                "id": "Company",
+                "displayName": "Company",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "Type Of Business",
+                "displayName": "Type Of Business",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Contact Name",
+                "displayName": "Contact Name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Designation",
+                "displayName": "Designation",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Phone Number",
+                "displayName": "Phone Number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Email",
+                "displayName": "Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "CIN",
+                "displayName": "CIN",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Location",
+                "displayName": "Location",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Website",
+                "displayName": "Website",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Intro Email",
+                "displayName": "Intro Email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": true
+              },
+              {
+                "id": "Status",
+                "displayName": "Status",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {
+            "cellFormat": "USER_ENTERED"
+          }
+        },
+        "id": "7a492ac0-ec56-450c-afb7-a9f21322c180",
+        "name": "Update Status: Failed",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4,
+        "position": [
+          688,
+          704
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "LXQcjPk0elGpErWs",
+            "name": "Email_auto_responder"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "// Smart rate limiting with company size awareness\nconst delay = 3000; // 3 seconds base delay\nconst companyData = $json;\n\n// Add slight variation to prevent server overload\nconst randomVariation = Math.floor(Math.random() * 1000); // 0-1000ms\nconst finalDelay = delay + randomVariation;\n\nconsole.log(`Processed intro email for: ${companyData.company}`);\nconsole.log(`Applying rate limit: ${finalDelay}ms delay`);\n\nawait new Promise(resolve => setTimeout(resolve, finalDelay));\n\nreturn $input.all();"
+        },
+        "id": "64dffad8-54bc-4f33-ae81-083c5a17ac01",
+        "name": "Rate Limit Processing",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          880,
+          608
+        ]
+      },
+      {
+        "parameters": {},
+        "id": "99b9bbf6-018f-4bf3-902f-add62b549127",
+        "name": "Intro Campaign Complete",
+        "type": "n8n-nodes-base.noOp",
+        "typeVersion": 1,
+        "position": [
+          1216,
+          1120
+        ]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "loose",
+              "version": 1
+            },
+            "conditions": [
+              {
+                "leftValue": "={{ $json.success }}",
+                "rightValue": true,
+                "operator": {
+                  "type": "boolean",
+                  "operation": "equal"
+                },
+                "id": "107ed82a-cdfd-4c5a-94e9-aed121926e5e"
+              },
+              {
+                "id": "ae5f2eb9-a334-47a3-a274-9bb358e0fffd",
+                "leftValue": "={{ $json.response }}",
+                "rightValue": "=250 2.0.0 Ok: queued as",
+                "operator": {
+                  "type": "string",
+                  "operation": "startsWith"
+                }
+              },
+              {
+                "id": "7135e306-0ec6-4aec-93bb-16633e8ece8a",
+                "leftValue": "={{ $json.rejected }}",
+                "rightValue": "",
+                "operator": {
+                  "type": "string",
+                  "operation": "empty",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "or"
+          },
+          "options": {
+            "ignoreCase": false,
+            "looseTypeValidation": true
+          }
+        },
+        "id": "838a1a31-3464-4a50-b3d4-6aa714a5ef18",
+        "name": "Email Sent Successfully?1",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2,
+        "position": [
+          480,
+          608
+        ]
+      },
+      {
+        "parameters": {
+          "sessionIdType": "customKey",
+          "sessionKey": "={{ $('Read Company Headers & Data').item.json.Company }}"
+        },
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "typeVersion": 1.3,
+        "position": [
+          -672,
+          1104
+        ],
+        "id": "f02f7078-df35-421c-9aa3-45b1716d2a35",
+        "name": "Simple Memory"
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "typeVersion": 1,
+        "position": [
+          -912,
+          960
+        ],
+        "id": "800a7f1b-f0eb-4c2a-b2ef-5dd05a2713bd",
+        "name": "Google Gemini Chat Model",
+        "credentials": {
+          "googlePalmApi": {
+            "id": "nZzxX7DR9BZSAzzB",
+            "name": "Google Gemini(PaLM) Api account 3"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "// Code Node 1: Generate intro emails for ALL companies\n// This processes every company record and generates intro emails\n\nlet companyData;\n\n// Get the input data - n8n provides items as an array\nconst inputItems = $input.all();\nconsole.log('Input items received:', inputItems.length);\n\nif (inputItems.length === 0) {\n  throw new Error('No input data received');\n}\n\n// Check if we have a single item containing an array, or multiple items\nif (inputItems.length === 1 && inputItems[0].json && Array.isArray(inputItems[0].json)) {\n  // Single item containing an array\n  companyData = inputItems[0].json;\n  console.log('Found array in single item');\n} else if (inputItems.length === 1 && inputItems[0].json && !Array.isArray(inputItems[0].json)) {\n  // Single item containing an object, check if it has array properties\n  const singleItem = inputItems[0].json;\n  console.log('Single item structure:', Object.keys(singleItem));\n  \n  // Look for array properties\n  const arrayKeys = Object.keys(singleItem).filter(key => Array.isArray(singleItem[key]));\n  if (arrayKeys.length > 0) {\n    companyData = singleItem[arrayKeys[0]];\n    console.log(`Found array in property: ${arrayKeys[0]}`);\n  } else {\n    // If single object, wrap it in an array\n    companyData = [singleItem];\n    console.log('Wrapped single object in array');\n  }\n} else {\n  // Multiple items, each item is a company record\n  companyData = inputItems.map(item => item.json);\n  console.log('Multiple items received, treating each as company record');\n}\n\n// Ensure we have an array\nif (!Array.isArray(companyData)) {\n  throw new Error(`Expected array but got ${typeof companyData}. Data: ${JSON.stringify(companyData).substring(0, 200)}`);\n}\n\nconsole.log(`Processing ${companyData.length} companies for intro email generation`);\nif (companyData.length > 0) {\n  console.log('Sample company structure:', JSON.stringify(companyData[0], null, 2));\n}\n\nconst processedCompanies = [];\nconst emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n\n// Function to generate intro email\nfunction generateIntroEmail(company, contactName, typeOfBusiness, location) {\n  const templates = [\n    `Subject: Partnership Opportunity with ${company}\n\nDear ${contactName},\n\nI hope this email finds you well. I came across ${company} and was impressed by your work in ${typeOfBusiness}${location ? ` in ${location}` : ''}.\n\nI believe there could be great synergy between our organizations, and I'd love to explore potential collaboration opportunities that could be mutually beneficial.\n\nWould you be available for a brief call next week to discuss how we might work together?\n\nLooking forward to hearing from you.\n\nBest regards,\n[Your Name]`,\n\n    `Subject: Exploring Business Collaboration - ${company}\n\nHello ${contactName},\n\nI hope you're having a great day! I've been researching companies in the ${typeOfBusiness} sector and ${company} stood out for its excellent reputation${location ? ` in ${location}` : ''}.\n\nI'd love to connect and explore potential ways our organizations could collaborate or support each other's growth.\n\nCould we schedule a short conversation to discuss potential opportunities?\n\nThank you for your time, and I look forward to connecting.\n\nWarm regards,\n[Your Name]`,\n\n    `Subject: Business Development Opportunity\n\nHi ${contactName},\n\nI trust this message finds you well. As someone involved in ${typeOfBusiness}, I thought you might be interested in exploring a potential business opportunity.\n\n${company} has caught my attention${location ? ` based in ${location}` : ''}, and I believe there could be valuable synergies between what we do.\n\nWould you be open to a brief discussion about potential collaboration?\n\nI'd appreciate the opportunity to connect and share more details.\n\nBest wishes,\n[Your Name]`\n  ];\n  \n  // Select a random template\n  const randomTemplate = templates[Math.floor(Math.random() * templates.length)];\n  return randomTemplate;\n}\n\n// Process each company record\ncompanyData.forEach((row, index) => {\n  // Handle case where row might be null or undefined\n  if (!row || typeof row !== 'object') {\n    console.log(`Skipping invalid row ${index}:`, row);\n    return;\n  }\n  \n  // Extract all header fields exactly as they appear in your data\n  const company = (row.Company || '').toString().trim();\n  const typeOfBusiness = (row['Type Of Business'] || '').toString().trim();\n  const contactName = (row['Contact Name'] || '').toString().trim();\n  const designation = (row.Designation || '').toString().trim();\n  const phoneNumber = (row['Phone Number'] || '').toString().trim();\n  const email = (row.Email || '').toString().trim();\n  const cin = (row.CIN || '').toString().trim();\n  const location = (row.Location || '').toString().trim();\n  const website = (row.Website || '').toString().trim();\n  const introEmail = (row['Intro Email'] || '').toString().trim();\n  const status = (row.Status || '').toString().trim();\n  const rowNumber = row.row_number || (index + 2);\n  \n  // Generate intro email for this company (regardless of existing intro email)\n  let generatedIntroEmail = '';\n  \n  if (company && contactName && typeOfBusiness) {\n    generatedIntroEmail = generateIntroEmail(company, contactName, typeOfBusiness, location);\n  } else {\n    generatedIntroEmail = 'Unable to generate - missing required fields (Company, Contact Name, or Type of Business)';\n  }\n  \n  // Debug logging for first few rows\n  if (index < 3) {\n    console.log(`Row ${index} (${rowNumber}) processed:`, {\n      company,\n      contactName,\n      email,\n      hasExistingIntroEmail: introEmail !== '',\n      generatedEmailLength: generatedIntroEmail.length\n    });\n  }\n  \n  // Add all companies to processed list with generated intro emails\n  processedCompanies.push({\n    // Original data\n    company: company,\n    typeOfBusiness: typeOfBusiness,\n    contactName: contactName,\n    designation: designation,\n    phoneNumber: phoneNumber,\n    email: email.toLowerCase(),\n    cin: cin,\n    location: location,\n    website: website,\n    originalIntroEmail: introEmail,\n    status: status,\n    rowNumber: rowNumber,\n    originalIndex: index,\n    \n    // Generated content\n    generatedIntroEmail: generatedIntroEmail,\n    hasValidEmail: emailRegex.test(email),\n    processingTimestamp: new Date().toISOString(),\n    \n    // Keep original row data for reference\n    originalRowData: row\n  });\n});\n\nconsole.log(`✅ Processed ${processedCompanies.length} companies with intro emails generated`);\n\n// Summary statistics\nconst companiesWithValidEmails = processedCompanies.filter(c => c.hasValidEmail).length;\nconst companiesWithExistingIntros = processedCompanies.filter(c => c.originalIntroEmail !== '').length;\nconst companiesWithMissingFields = processedCompanies.filter(c => c.generatedIntroEmail.includes('Unable to generate')).length;\n\nconsole.log('\\n📊 Processing Summary:');\nconsole.log(`- Total companies processed: ${processedCompanies.length}`);\nconsole.log(`- Companies with valid emails: ${companiesWithValidEmails}`);\nconsole.log(`- Companies with existing intro emails: ${companiesWithExistingIntros}`);\nconsole.log(`- Companies with missing required fields: ${companiesWithMissingFields}`);\n\n// Log some successful samples\nconsole.log('\\n✅ Sample processed companies:');\nprocessedCompanies.slice(0, 3).forEach((company, i) => {\n  console.log(`${i + 1}. ${company.company} - ${company.contactName} (Valid Email: ${company.hasValidEmail})`);\n});\n\n// Return all processed companies\nreturn processedCompanies.map(company => ({ json: company }));"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -1280,
+          672
+        ],
+        "id": "7b9766bf-e04d-4bfa-a48b-e7ea5ba99b33",
+        "name": "Code"
+      },
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "0d98f48c-8a33-462d-9664-965572c549e5",
+                      "leftValue": "={{ $json.hasValidEmail }}",
+                      "rightValue": "=true",
+                      "operator": {
+                        "type": "string",
+                        "operation": "regex"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "Has Email"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "e639d8f8-ddf5-4f48-8ad7-bf5918829d1f",
+                      "leftValue": "={{ $json.hasValidEmail }}",
+                      "rightValue": "false",
+                      "operator": {
+                        "type": "string",
+                        "operation": "regex"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "No Email Found"
+              }
+            ]
+          },
+          "looseTypeValidation": true,
+          "options": {}
+        },
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.2,
+        "position": [
+          -1072,
+          672
+        ],
+        "id": "38e99fb4-4074-4f14-a5ef-f0c48d1f6162",
+        "name": "Switch"
+      },
+      {
+        "parameters": {},
+        "type": "n8n-nodes-base.manualTrigger",
+        "typeVersion": 1,
+        "position": [
+          -1952,
+          688
+        ],
+        "id": "1293babc-4dfb-4eb5-830b-4a159467f623",
+        "name": "When clicking ‘Execute workflow’"
+      },
+      {
+        "parameters": {
+          "promptType": "define",
+          "text": "=You are an expert business email writer for Autoom Studio. Craft a professional B2B introduction email using ALL the company header data provided.\n\n**Company Details from Headers:**\n- Company: {{ $json.company }}\n- Type of Business: {{ $json.typeOfBusiness }}\n- Contact Name: {{ $json.contactName }}\n- Designation: {{ $json.designation }}\n- Phone: {{ $json.phoneNumber }}\n- Email: {{ $json.email }}\n- CIN: {{ $json.cin }}\n- Location: {{ $json.location }}\n- Website: {{ $json.website }}\n\n```\n**Autoom Studio Information:**\nAutoom Studio (OPC) Private Limited\nLeading AI-Powered Business Automation Solutions Provider\n\nCompany Overview\nAutoom Studio (OPC) Private Limited is a pioneering technology company based in Bhubaneswar, Odisha, India, specializing in cutting-edge AI-driven business automation solutions. As one of India's leading automation IT services providers, we are dedicated to revolutionizing how businesses operate through intelligent automation, artificial intelligence, and digital transformation initiatives.\nCorporate Address: Flat No 303, Plot No 334, Rasulgarh, GGP Colony, Bhubaneswar, Khordha, Odisha - 751010\nContact: +91 9545453412 | connect@autoomstudio.com\n\nAI-Powered Solutions & Services\nAuSomeMgr.com - AI Workspace Platform\nOur flagship AI platform represents the future of intelligent workplace automation. AuSomeMgr.com delivers a comprehensive suite of custom AI agents designed to transform professional workflows across industries:\n\nIntelligent Research Agents - Automated web research and data compilation\nCustomer Communication AI - Advanced chatbots and virtual assistants\nData Analytics Agents - Real-time data processing and insights generation\nTask Management AI - Automated task assignment and workflow optimization\nSocial Media Intelligence - AI-powered content management and engagement\nDocument Processing AI - Intelligent document creation, organization, and management\nCommunication Automation - Email handling, contact management, and voice calling systems\nAI-Assisted Recruitment - Intelligent interview processes and candidate evaluation\n\nCustom AI Agent Development\nWe specialize in creating bespoke AI solutions tailored to specific industry requirements:\n\nDigital Colleagues - AI agents that function as virtual team members\nIndustry-Specific Language Processing - AI systems trained on domain-specific terminology\nBusiness Logic Integration - AI agents that understand and execute complex business rules\nConversational AI Solutions - Advanced chatbots and virtual assistants\nIntelligent Process Automation - AI-driven workflow optimization and decision-making\n\nEnterprise AI Services\n\nAI Strategy Consulting - Strategic roadmap development for AI implementation\nMachine Learning Solutions - Custom ML models for predictive analytics\nNatural Language Processing - Text analysis, sentiment analysis, and language understanding\nComputer Vision Applications - Image recognition and automated visual processing\nAI Model Training & Optimization - Performance tuning and continuous learning systems\n\n\nIndustry 4.0 Leadership\nAutoom Studio stands at the forefront of Industry 4.0 transformation, delivering innovative AI solutions that bridge the gap between traditional business operations and intelligent automation. Our team of technologists and industry experts ensures seamless integration of AI technologies that drive measurable business outcomes.\nKey Differentiators:\n\nProprietary AI Platform - AuSomeMgr.com offers unique, customizable AI agents\nIndustry Expertise - Deep understanding of sector-specific automation needs\nScalable Solutions - AI systems that grow with your business requirements\nContinuous Innovation - Ongoing optimization and enhancement of AI capabilities\nEnd-to-End Support - Comprehensive implementation, training, and maintenance services\n\n\nValue Proposition\nTransforming Business Operations Through Intelligent Automation\nOur AI-powered solutions enable organizations to:\n\nIncrease Operational Efficiency by up to 300% through intelligent automation\nReduce Manual Errors with AI-driven quality control and validation\nEnhance Decision-Making with real-time analytics and predictive insights\nImprove Customer Experience through responsive AI agents and personalized interactions\nAccelerate Digital Transformation with seamless AI integration across existing systems\nAchieve Cost Optimization by automating repetitive tasks and optimizing resource allocation\n\n\nVision Statement\n\"To democratize AI technology and make intelligent automation accessible to businesses of all sizes, empowering them to achieve unprecedented levels of efficiency, innovation, and growth in the digital economy.\"\nMission\n\"We are committed to delivering cutting-edge AI solutions that transform how businesses operate, enabling our clients to focus on strategic initiatives while our intelligent systems handle operational complexities.\"\n\nPartner with Autoom Studio to unlock the full potential of AI-driven business automation and position your organization at the forefront of the digital revolution.\n\n```\n\n**Email Requirements:**\n1. **Professional B2B tone** appropriate for business outreach\n2. **Personalize using contact name and designation**\n3. **Reference their company and business type specifically**\n4. **Mention their location** for local connection if in India\n5. **Highlight relevant Autoom Studio services** for their industry\n6. **Include clear value proposition** and business benefits\n7. **Professional call-to-action** for business discussion\n8. **Complete html based email** with modern business styling\n9. **Proper business email signature**\n\n# Autoom Studio - Industry Focus Areas Based on AI Capabilities\n\n```\n**Focus Areas Based on Business Type:**\n\n## **Retail/E-commerce**\n- **Customer Management**: AI-powered customer communication and virtual shopping assistants with personalized interaction tracking\n- **Lead Generation**: Intelligent social media content management and engagement automation for prospect identification\n- **Email Management**: Automated email marketing campaigns with personalized customer interactions and response handling\n- **Task Management**: Real-time data analytics coordination for sales optimization and customer behavior insights\n- **Workflow Management**: Smart document processing automation for order management and inventory tracking\n- **Resource Management**: Computer vision applications for product recognition, quality control, and inventory optimization\n\n## **Manufacturing**\n- **Workflow Management**: Intelligent process automation for production workflow optimization and scheduling\n- **Task Management**: AI-driven task assignment and resource allocation systems across production lines\n- **Resource Management**: Automated quality control with computer vision and predictive analytics for equipment utilization\n- **Customer Management**: Digital colleagues for client communication and order processing management\n- **Lead Generation**: Custom ML models for demand forecasting and new market opportunity identification\n- **Email Management**: Industry-specific AI agents for supplier communication and procurement correspondence\n\n## **Healthcare**\n- **Customer Management**: AI-assisted patient communication and appointment scheduling systems with care coordination\n- **Task Management**: Intelligent document processing for medical records and compliance task automation\n- **Email Management**: Natural language processing for patient communication and automated follow-up systems\n- **Workflow Management**: Automated recruitment systems for healthcare professional evaluation and onboarding\n- **Resource Management**: Custom AI agents for equipment scheduling and facility management optimization\n- **Lead Generation**: Predictive analytics for patient acquisition and treatment outcome forecasting\n\n## **Professional Services**\n- **Customer Management**: Digital colleagues for client relationship management and communication tracking\n- **Lead Generation**: Intelligent research agents for market analysis and prospect identification\n- **Task Management**: AI-powered document creation and contract management automation\n- **Email Management**: Conversational AI solutions for client correspondence and inquiry handling\n- **Workflow Management**: Advanced workflow optimization and decision-making automation for project delivery\n- **Resource Management**: Custom AI strategy consulting for business transformation and talent allocation\n\n## **Education**\n- **Lead Generation**: AI-assisted recruitment and candidate evaluation for student admissions and enrollment\n- **Task Management**: Intelligent content management and curriculum development task automation\n- **Email Management**: Automated student communication and engagement platforms with personalized messaging\n- **Customer Management**: Smart analytics for student performance tracking and relationship management\n- **Workflow Management**: Custom AI agents for personalized learning path optimization and academic scheduling\n- **Resource Management**: Natural language processing for educational content analysis and faculty allocation\n\n## **Finance/Banking**\n- **Customer Management**: Advanced conversational AI for customer service and financial advisory relationship management\n- **Task Management**: Intelligent compliance automation and regulatory reporting task coordination\n- **Lead Generation**: AI-driven risk assessment and new client acquisition through predictive analytics\n- **Email Management**: Automated document processing communication for loan applications and KYC procedures\n- **Workflow Management**: Custom ML models for credit scoring and investment portfolio management processes\n- **Resource Management**: Digital colleagues for financial planning optimization and resource allocation across departments\n```\n\nRespond with ONLY this JSON format:\n{\n  \"subject\": \"Professional subject line (max 60 chars)\",\n  \"html_body\": \"Complete professional html based email with styling\",\n  \"personalization_score\":>= 90\n}",
+          "needsFallback": true,
+          "options": {
+            "systemMessage": "# N8N AI Agent System Prompt: Mission-Driven B2B Email Generator\n\nYou are a specialized AI agent designed to craft deeply personal, story-driven B2B introductory emails for Autoom Studio's AI solutions. Your approach mirrors that of an empathetic business advisor who understands not just what people do, but WHY they do it - their mission, values, and the impact they're trying to create.\n\n## Core Philosophy\nEvery email should demonstrate genuine admiration for the recipient's work and mission. You're not just selling automation - you're offering to amplify their ability to create positive change in the world.\n\n## Input Parameters Expected\n- **Contact Name & Title**: [Full name with designation]\n- **Company/Organization Name**: [Including type - enterprise, NGO, social venture, etc.]\n- **Industry/Sector**: [Business category and specialization]\n- **Mission/Purpose**: [Their core mission, social impact, or unique value proposition]\n- **Background Context**: [Professional journey, personal story, founding story, achievements]\n- **Operational Context**: [Business model, beneficiaries, geographic focus, scale]\n\n## Advanced Email Architecture\n\n### Story-Driven Opening (40-50 words)\n- **Personal journey acknowledgment**: Reference their professional evolution or career transition\n- **Mission appreciation**: Show genuine understanding and admiration for their purpose\n- **Impact recognition**: Acknowledge the specific change they're creating in their sector/community\n- **Emotional connection**: Use language that resonates with their values and aspirations\n\n**Example patterns:**\n- \"I've been following your remarkable journey from [previous role] to [current mission]...\"\n- \"I came across [Organization]'s extraordinary story and was deeply moved by...\"\n- \"Your commitment to [specific mission] is exactly the kind of purposeful work that deserves to scale its impact...\"\n\n### Mission Context & Achievements (30-40 words)\n- **Founding story or key milestones**: Recent establishment, growth trajectory, significant achievements\n- **Unique value proposition**: What makes their approach special or innovative\n- **Beneficiary impact**: Who they serve and how (communities, customers, causes)\n- **Geographic or sectoral significance**: Their role in local/regional transformation\n\n### Operational Challenge Identification (40-50 words)\nFrame challenges in the context of their dual responsibilities - mission AND operations:\n\n**For Social Entrepreneurs/NGOs:**\n- Balancing social impact measurement with operational efficiency\n- Managing beneficiary programs alongside compliance and reporting\n- Coordinating with multiple stakeholder groups (beneficiaries, funders, government)\n- Scaling impact while maintaining quality and mission integrity\n\n**For Mission-Driven Businesses:**\n- Managing purpose-driven operations alongside commercial viability\n- Coordinating social impact with business growth\n- Handling customer education about their mission story\n- Balancing artisanal quality with scalable operations\n\n**For Traditional Businesses with Unique Models:**\n- Coordinating complex operational workflows\n- Managing multi-market or multi-product complexity\n- Balancing quality standards with growth demands\n- Optimizing resource allocation across diverse functions\n\n### Mission-Aligned Solution Presentation (70-80 words)\nPresent 5-6 specific automation solutions using this exact format with bold headers followed by descriptive explanations:\n\n**Here's how we could specifically enhance [Company Name]'s [specific operations/mission area]:**\n\n**Solution Category 1** - Detailed explanation of how this automation addresses their specific challenge\n**Solution Category 2** - Specific benefit description tailored to their business model\n**Solution Category 3** - Clear connection between the technology and their operational needs\n**Solution Category 4** - Measurable improvement in their key performance areas\n**Solution Category 5** - Strategic advantage that supports their growth or mission goals\n**Solution Category 6** - Integration benefit that enhances their overall workflow\n\n**Examples by sector:**\n- **Social Impact**: Beneficiary Management, Impact Dashboards, Multi-stakeholder Communication, Grant Reporting, Program Analytics\n- **Business Services**: Project Management Automation, Client Communication Systems, Resource Coordination, Performance Analytics, Document Management\n- **Manufacturing/Export**: Production Planning, Quality Control, Multi-market Communication, Compliance Management, Supply Chain Optimization\n\n### Values-Based Positioning (50-75 words)\n- **Emphasize enhancement, not replacement**: Technology that amplifies human impact\n- **Align with their values**: Show understanding of what matters to them\n- **Mission preservation**: Ensure automation supports rather than compromises their purpose\n- **Strategic focus**: Free them for higher-value mission work\n\n### Inspirational Call to Action (25-50 words)\n- Position the conversation as **exploring amplification of their impact**\n- Reference their specific mission or transformation goals\n- Offer to understand their unique challenges\n- Frame as strategic partnership for greater good\n\n## Advanced Personalization Techniques\n\n### Emotional Intelligence Integration\n- **Career transition respect**: Acknowledge bold career changes or entrepreneurial leaps\n- **Mission appreciation**: Show genuine understanding of their purpose and impact\n- **Value alignment**: Demonstrate shared commitment to positive change\n- **Story recognition**: Reference the inspiring nature of their work\n\n### Mission-Specific Language Patterns\n- **Social enterprises**: \"scale impact,\" \"sustainable transformation,\" \"community empowerment\"\n- **Agricultural/rural development**: \"ecosystem development,\" \"farmer livelihoods,\" \"rural transformation\"\n- **Education/special needs**: \"inclusive growth,\" \"vocational empowerment,\" \"specialized support\"\n- **Artisanal/premium**: \"craft excellence,\" \"artisanal integrity,\" \"premium standards\"\n- **Export/manufacturing**: \"global competitiveness,\" \"quality leadership,\" \"market excellence\"\n\n### Industry-Specific Mission Understanding\n\n#### **Social Enterprises/NGOs**\n- Focus on impact scaling, beneficiary outcomes, stakeholder coordination\n- Emphasize mission preservation while optimizing operations\n- Reference sustainable development and community transformation\n\n#### **Agricultural/Rural Development**\n- Highlight farmer empowerment, ecosystem building, rural transformation\n- Focus on supply chain coordination, impact measurement, stakeholder management\n- Emphasize sustainable and inclusive growth\n\n#### **Education/Special Needs**\n- Focus on student outcomes, inclusive methodologies, specialized support\n- Highlight program coordination, progress tracking, family communication\n- Emphasize empowerment and skill development\n\n#### **Artisanal/Premium Manufacturing**\n- Balance craft integrity with operational efficiency\n- Focus on quality maintenance, story-telling, customer education\n- Emphasize scaling without compromising artisanal values\n\n## Tone & Style Guidelines\n\n### Authentic Admiration\n- Express genuine respect for their work and mission\n- Use language that shows deep understanding of their sector\n- Acknowledge the courage required for their entrepreneurial journey\n- Show appreciation for their impact on communities/industries\n\n### Mission-Aligned Professionalism\n- Maintain consultative expertise while showing personal investment\n- Use terminology that resonates with their values and sector\n- Balance business acumen with social consciousness\n- Position Autoom as mission-aligned partner, not just vendor\n\n### Inspirational Yet Practical\n- Inspire confidence in their ability to scale impact\n- Present practical solutions grounded in their reality\n- Balance aspiration with operational pragmatism\n- Focus on amplification rather than transformation\n\n## Email Structure Requirements\n- **300-350 words** for comprehensive mission-driven communication\n- **Clear narrative arc**: Story → Mission → Challenges → Solutions → Partnership\n- **Strategic formatting**: Bold solution categories, bullet points for challenges\n- **Emotional resonance**: Language that connects with their purpose and values\n\n## Quality Excellence Checklist\n- [ ] Opening demonstrates genuine appreciation for their mission and journey\n- [ ] Challenges reflect the complexity of balancing mission with operations\n- [ ] Solutions directly support their ability to scale impact\n- [ ] Language aligns with their values and sector terminology\n- [ ] Call to action frames conversation as mission amplification opportunity\n- [ ] Overall tone shows authentic respect and understanding\n- [ ] Email maintains mission-driven narrative throughout\n- [ ] Formatting enhances readability and emphasizes key value propositions\n\nBest regards,\n\n```\n## Signature Template\nUse this exact HTML email signature format (NEVER CHANGE THIS):\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Email Signature - Dillip Sahoo</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            margin: 20px;\n            background-color: #f5f5f5;\n        }\n        .signature-container {\n            background: white;\n            padding: 20px;\n            border-radius: 8px;\n            box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n            max-width: 500px;\n            margin: 0 auto;\n        }\n        .signature {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            color: #333;\n            line-height: 1.4;\n        }\n        .name {\n            font-size: 18px;\n            font-weight: bold;\n            color: #007acc;\n            margin-bottom: 2px;\n        }\n        .title {\n            font-size: 14px;\n            color: #666;\n            font-weight: 500;\n            margin-bottom: 8px;\n        }\n        .company {\n            font-size: 14px;\n            font-weight: bold;\n            color: #007acc;\n            margin-bottom: 10px;\n        }\n        .contact-info {\n            font-size: 12px;\n            color: #555;\n        }\n        .contact-row {\n            margin-bottom: 3px;\n        }\n        .contact-row a {\n            color: #007acc;\n            text-decoration: none;\n        }\n        .contact-row a:hover {\n            text-decoration: underline;\n        }\n        .divider {\n            border-top: 1px solid #eee;\n            margin: 12px 0 8px 0;\n        }\n        .linkedin {\n            display: inline-flex;\n            align-items: center;\n            gap: 5px;\n        }\n        .linkedin-icon {\n            width: 16px;\n            height: 16px;\n        }\n        .copy-instructions {\n            margin-top: 20px;\n            padding: 15px;\n            background-color: #f8f9fa;\n            border-radius: 5px;\n            font-size: 14px;\n            color: #666;\n            text-align: center;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"signature-container\">\n        <div class=\"signature\" id=\"emailSignature\">\n            <div class=\"name\">Dillip Sahoo</div>\n            <div class=\"title\">Founding Manager</div>\n            <div class=\"company\">AutoomStudio.com</div>\n           \n            <div class=\"divider\"></div>\n           \n            <div class=\"contact-info\">\n                <div class=\"contact-row\">\n                    📧 <a href=\"mailto:dillip.sahoo@autoomstudio.in\">dillip.sahoo@autoomstudio.in</a>\n                </div>\n                <div class=\"contact-row\">\n                    📱 <a href=\"tel:+918484800333\">+91 84848 00333</a>\n                </div>\n                <div class=\"contact-row\">\n                    <span class=\"linkedin\">\n                        💼 <a href=\"https://www.linkedin.com/in/skdillip/\" target=\"_blank\">LinkedIn Profile</a>\n                    </span>\n                </div>\n            </div>\n        </div>\n       \n\n    </div>\n    <script>\n        // Make the signature easily selectable\n        document.getElementById('emailSignature').addEventListener('click', function() {\n            const range = document.createRange();\n            range.selectNode(this);\n            window.getSelection().removeAllRanges();\n            window.getSelection().addRange(range);\n        });\n    </script>\n</body>\n</html>\n\n```\n\n## Critical Success Factors\n1. **Mission First**: Always lead with appreciation for their purpose and impact\n2. **Story Integration**: Weave their personal/professional journey throughout\n3. **Value Alignment**: Show that Autoom shares their commitment to positive change\n4. **Impact Amplification**: Position automation as a tool for greater mission fulfillment\n5. **Authentic Respect**: Express genuine admiration for their courage and commitment\n6. **Practical Wisdom**: Offer solutions grounded in understanding of their unique challenges\n\nRemember: You're not just selling automation software - you're offering to help remarkable people do remarkable work more effectively. Every email should leave the recipient feeling understood, appreciated, and excited about the possibility of amplifying their impact."
+          }
+        },
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "typeVersion": 2.2,
+        "position": [
+          -800,
+          656
+        ],
+        "id": "aac8fa63-73c2-4c06-94e9-7da7a984e0f5",
+        "name": "AI Agent"
+      },
+      {
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4.1-mini"
+          },
+          "options": {}
+        },
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "typeVersion": 1.2,
+        "position": [
+          -816,
+          1136
+        ],
+        "id": "fc3b86f7-46bd-4bf9-bc36-ca942fe2e980",
+        "name": "OpenAI Chat Model",
+        "credentials": {
+          "openAiApi": {
+            "id": "Iuk1vUmummDliyf6",
+            "name": "OpenAi account 3"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "type": "n8n-nodes-base.splitInBatches",
+        "typeVersion": 3,
+        "position": [
+          -1504,
+          656
+        ],
+        "id": "c5a21ca6-d4bc-426b-9ae5-b8506e64dc22",
+        "name": "Loop Over Items"
+      },
+      {
+        "parameters": {
+          "fromEmail": "dillip.sahoo@autoomstudio.in",
+          "toEmail": "={{ $('Read Company Headers & Data').item.json.Email }}",
+          "subject": "={{ $json.subject }}",
+          "html": "={{ $json.fullEmailHtml }}",
+          "options": {
+            "appendAttribution": false,
+            "allowUnauthorizedCerts": true,
+            "replyTo": "dillip.sahoo@autoomstudio.in"
+          }
+        },
+        "id": "9027fd5c-d8ea-49dd-abc0-760c2b5e771e",
+        "name": "Send Intro Email",
+        "type": "n8n-nodes-base.emailSend",
+        "typeVersion": 2.1,
+        "position": [
+          -176,
+          656
+        ],
+        "webhookId": "4add1fca-5b24-4e07-99a8-f0c8ad3483b0",
+        "credentials": {
+          "smtp": {
+            "id": "W2JOjuaI1P6HEtQe",
+            "name": "SMTP account 3 dillip.sahoo@autoomstudio.in"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "// N8N Code Node - Robust JSON Email Parser with Error Handling\n\n// Get the input data (assuming it comes from previous node)\nconst inputData = $input.all();\n\n// Initialize output array\nconst outputItems = [];\n\n// Helper function to extract JSON from markdown-wrapped content\nfunction extractJsonFromMarkdown(text) {\n  // Remove markdown code block markers\n  let cleaned = text.replace(/^```json\\s*/, '').replace(/\\s*```$/, '').trim();\n  return cleaned;\n}\n\n// Helper function to safely parse JSON with fallback extraction\nfunction safeJsonParse(jsonString) {\n  try {\n    // First try direct parsing\n    return JSON.parse(jsonString);\n  } catch (e) {\n    console.log('Direct parsing failed, trying manual extraction...');\n    \n    // Manual extraction as fallback\n    const subjectMatch = jsonString.match(/\"subject\":\\s*\"([^\"]*(?:\\\\.[^\"]*)*)\"/);\n    const personalizationMatch = jsonString.match(/\"personalization_score\":\\s*(\\d+)/);\n    \n    // Extract HTML body more carefully\n    const htmlBodyStart = jsonString.indexOf('\"html_body\":');\n    if (htmlBodyStart === -1) throw new Error('Cannot find html_body field');\n    \n    // Find the start of the HTML content\n    const contentStart = jsonString.indexOf('\"', htmlBodyStart + 12) + 1;\n    \n    // Find the end by looking for the last occurrence of personalization_score\n    const personalizationStart = jsonString.lastIndexOf('\"personalization_score\"');\n    if (personalizationStart === -1) throw new Error('Cannot find end of html_body');\n    \n    // Find the quote before personalization_score (end of html_body)\n    let contentEnd = personalizationStart;\n    while (contentEnd > contentStart && jsonString[contentEnd - 1] !== '\"') {\n      contentEnd--;\n    }\n    contentEnd--; // Move before the quote\n    \n    // Extract and clean the HTML content\n    let htmlContent = jsonString.substring(contentStart, contentEnd);\n    \n    // Basic cleanup of escaped characters\n    htmlContent = htmlContent.replace(/\\\\\"/g, '\"');\n    htmlContent = htmlContent.replace(/\\\\n/g, '\\n');\n    htmlContent = htmlContent.replace(/\\\\\\\\/g, '\\\\');\n    \n    return {\n      subject: subjectMatch ? subjectMatch[1].replace(/\\\\\"/g, '\"') : 'No Subject',\n      html_body: htmlContent,\n      personalization_score: personalizationMatch ? parseInt(personalizationMatch[1]) : 0\n    };\n  }\n}\n\n// Process each item in the input\ninputData.forEach((item, index) => {\n  try {\n    // Extract the JSON string from the output field\n    let rawContent = item.json.output;\n    \n    // Clean up markdown formatting\n    let jsonString = extractJsonFromMarkdown(rawContent);\n    \n    // Parse the JSON with fallback\n    const emailData = safeJsonParse(jsonString);\n    \n    // Clean up HTML body\n    let htmlBody = emailData.html_body || '';\n    \n    // Additional cleanup\n    htmlBody = htmlBody.replace(/\\\\'/g, \"'\");\n    htmlBody = htmlBody.replace(/\\s+/g, ' '); // Normalize whitespace\n    htmlBody = htmlBody.trim();\n    \n    // Create proper email HTML structure\n    const emailHtml = `<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>${emailData.subject || 'Email'}</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n            color: #333;\n            max-width: 600px;\n            margin: 0 auto;\n            padding: 20px;\n            background-color: #f9f9f9;\n        }\n        .email-container {\n            background-color: white;\n            padding: 30px;\n            border-radius: 8px;\n            box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n        }\n        .email-content {\n            font-size: 14px;\n            line-height: 1.8;\n        }\n        .email-content p {\n            margin-bottom: 15px;\n        }\n        .highlight {\n            font-weight: bold;\n            color: #007acc;\n        }\n        .signature-section {\n            margin-top: 30px;\n            border-top: 1px solid #eee;\n            padding-top: 20px;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"email-container\">\n        <div class=\"email-content\">\n${htmlBody}\n        </div>\n    </div>\n</body>\n</html>`;\n\n    // Split content to separate email body from signature\n    const parts = htmlBody.split('<!DOCTYPE html>');\n    const emailBodyText = parts[0].trim();\n    const signatureHtml = parts.length > 1 ? '<!DOCTYPE html>' + parts[1] : '';\n    \n    // Create a clean text version\n    const textVersion = emailBodyText\n      .replace(/<[^>]*>/g, '')\n      .replace(/\\*\\*(.*?)\\*\\*/g, '$1')\n      .replace(/\\s+/g, ' ')\n      .replace(/\\n\\s*\\n/g, '\\n\\n')\n      .trim();\n    \n    // Create the output object\n    const outputItem = {\n      json: {\n        // Original data\n        originalOutput: item.json.output,\n        \n        // Parsed email data\n        subject: emailData.subject || 'No Subject',\n        personalizationScore: emailData.personalization_score || 0,\n        \n        // HTML versions\n        fullEmailHtml: emailHtml,\n        emailBodyHtml: emailBodyText,\n        signatureHtml: signatureHtml,\n        \n        // Text version\n        emailBodyText: textVersion,\n        \n        // Email-ready format\n        emailData: {\n          to: '', // To be filled by next node\n          subject: emailData.subject || 'No Subject',\n          html: emailHtml,\n          text: textVersion\n        },\n        \n        // Metadata\n        processedAt: new Date().toISOString(),\n        itemIndex: index,\n        parsingMethod: 'success'\n      }\n    };\n    \n    outputItems.push(outputItem);\n    \n  } catch (error) {\n    // Enhanced error handling with more debugging info\n    console.error(`Error processing item ${index}:`, error.message);\n    \n    // Try to extract at least the subject if possible\n    let partialSubject = 'Parse Error';\n    try {\n      const subjectMatch = item.json.output.match(/\"subject\":\\s*\"([^\"]*(?:\\\\.[^\"]*)*)\"/);\n      if (subjectMatch) {\n        partialSubject = subjectMatch[1].replace(/\\\\\"/g, '\"');\n      }\n    } catch (e) {\n      // Ignore extraction error\n    }\n    \n    const errorItem = {\n      json: {\n        error: true,\n        errorMessage: error.message,\n        partialSubject: partialSubject,\n        rawContent: item.json.output.substring(0, 500) + '...', // First 500 chars for debugging\n        itemIndex: index,\n        processedAt: new Date().toISOString()\n      }\n    };\n    \n    outputItems.push(errorItem);\n  }\n});\n\n// Return the processed items\nreturn outputItems;"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          -448,
+          656
+        ],
+        "id": "d09538ab-c3ca-4b93-941a-474dad4258ac",
+        "name": "Subject Email Splitter"
+      },
+      {
+        "parameters": {
+          "jsCode": "// n8n Code Node - HTML Email to Plain Text Converter\n// This code processes the input data and converts HTML email to plain text format\n\nconst inputData = $input.all();\nconst results = [];\n\ninputData.forEach((item, index) => {\n  const data = item.json;\n  \n  // Extract subject from nested structure\n  const subject = data.subject || data.emailData?.subject || '';\n  \n  // Extract HTML body from various possible locations\n  let htmlBody = '';\n  \n  // Check multiple possible locations for HTML content\n  if (data.originalOutput) {\n    // Parse the JSON string in originalOutput\n    try {\n      const originalData = JSON.parse(data.originalOutput.replace('```json\\n', '').replace('\\n```', ''));\n      htmlBody = originalData.html_body || '';\n    } catch (e) {\n      console.log('Error parsing originalOutput:', e);\n    }\n  }\n  \n  // Fallback to other HTML sources\n  if (!htmlBody) {\n    htmlBody = data.html_body || data.fullEmailHtml || data.emailData?.html || data.signatureHtml || '';\n  }\n  \n  // Function to convert HTML to plain text\n  function htmlToText(html) {\n    let text = html;\n    \n    // Remove DOCTYPE, html, head, style tags and their contents\n    text = text.replace(/<!DOCTYPE[^>]*>/gi, '');\n    text = text.replace(/<html[^>]*>/gi, '');\n    text = text.replace(/<\\/html>/gi, '');\n    text = text.replace(/<head[^>]*>[\\s\\S]*?<\\/head>/gi, '');\n    text = text.replace(/<style[^>]*>[\\s\\S]*?<\\/style>/gi, '');\n    text = text.replace(/<script[^>]*>[\\s\\S]*?<\\/script>/gi, '');\n    \n    // Remove body tags\n    text = text.replace(/<body[^>]*>/gi, '');\n    text = text.replace(/<\\/body>/gi, '');\n    \n    // Remove div containers\n    text = text.replace(/<div[^>]*>/gi, '');\n    text = text.replace(/<\\/div>/gi, '');\n    \n    // Convert paragraphs to line breaks\n    text = text.replace(/<p[^>]*>/gi, '');\n    text = text.replace(/<\\/p>/gi, '\\n');\n    \n    // Convert headers to bold text\n    text = text.replace(/<h[1-6][^>]*>/gi, '**');\n    text = text.replace(/<\\/h[1-6]>/gi, '**\\n');\n    \n    // Handle list items - convert to bullet points\n    text = text.replace(/<li[^>]*>/gi, '* ');\n    text = text.replace(/<\\/li>/gi, '\\n');\n    \n    // Remove ul/ol tags\n    text = text.replace(/<\\/?ul[^>]*>/gi, '');\n    text = text.replace(/<\\/?ol[^>]*>/gi, '');\n    \n    // Handle spans with solution-category class - make them bold\n    text = text.replace(/<span class=\"solution-category\"[^>]*>/gi, '**');\n    text = text.replace(/<\\/span>/gi, '**');\n    \n    // Handle other spans\n    text = text.replace(/<span[^>]*>/gi, '');\n    \n    // Handle links - keep the text but remove href\n    text = text.replace(/<a[^>]*href=\"([^\"]*)\"[^>]*>([^<]*)<\\/a>/gi, '$2');\n    text = text.replace(/<a[^>]*>([^<]*)<\\/a>/gi, '$1');\n    \n    // Handle signature elements\n    text = text.replace(/<div class=\"name\"[^>]*>/gi, '**');\n    text = text.replace(/<div class=\"title\"[^>]*>/gi, '**');\n    text = text.replace(/<div class=\"company\"[^>]*>/gi, '**');\n    text = text.replace(/<div class=\"contact-row\"[^>]*>/gi, '');\n    text = text.replace(/<div class=\"signature[^\"]*\"[^>]*>/gi, '');\n    text = text.replace(/<div class=\"signature-container\"[^>]*>/gi, '');\n    text = text.replace(/<div class=\"contact-info\"[^>]*>/gi, '');\n    text = text.replace(/<div class=\"divider\"[^>]*>/gi, '');\n    text = text.replace(/<div class=\"linkedin\"[^>]*>/gi, '');\n    \n    // Remove remaining HTML tags\n    text = text.replace(/<[^>]+>/g, '');\n    \n    // Decode HTML entities\n    text = text.replace(/&lt;/g, '<');\n    text = text.replace(/&gt;/g, '>');\n    text = text.replace(/&amp;/g, '&');\n    text = text.replace(/&quot;/g, '\"');\n    text = text.replace(/&#39;/g, \"'\");\n    text = text.replace(/&nbsp;/g, ' ');\n    \n    // Clean up extra whitespace and normalize line breaks\n    text = text.replace(/[ \\t]+/g, ' '); // Multiple spaces/tabs to single space\n    text = text.replace(/\\n\\s+/g, '\\n'); // Remove spaces at start of lines\n    text = text.replace(/\\s+\\n/g, '\\n'); // Remove spaces at end of lines\n    text = text.replace(/\\n{3,}/g, '\\n\\n'); // Multiple line breaks to double\n    text = text.trim();\n    \n    return text;\n  }\n  \n  // Convert HTML to text\n  let bodyText = htmlToText(htmlBody);\n  \n  // Format the final output\n  let formattedText = `Subject: ${subject}\\n\\n${bodyText}`;\n  \n  // Clean up any remaining formatting issues\n  formattedText = formattedText.replace(/\\*\\*([^*]+)\\*\\*/g, '**$1**'); // Ensure proper bold formatting\n  formattedText = formattedText.replace(/\\n\\s*\\n\\s*\\n/g, '\\n\\n'); // Clean up excessive line breaks\n  \n  // Create output object\n  const result = {\n    subject: subject,\n    plain_text: formattedText,\n    personalization_score: data.personalization_score || data.personalizationScore || null,\n    original_index: data.itemIndex || index,\n    processed_at: data.processedAt || new Date().toISOString()\n  };\n  \n  results.push({ json: result });\n});\n\nreturn results;"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          96,
+          432
+        ],
+        "id": "7c769a07-a0f2-4f77-87ca-6ac2b38d7c1b",
+        "name": "Normal Text Converter"
+      },
+      {
+        "parameters": {
+          "updates": [
+            "message"
+          ],
+          "additionalFields": {
+            "chatIds": "-4882269459"
+          }
+        },
+        "type": "n8n-nodes-base.telegramTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          -1968,
+          384
+        ],
+        "id": "a41e4f7a-275c-4c52-a03c-75e21fc4dc9c",
+        "name": "Telegram Trigger",
+        "webhookId": "b40be18e-4103-4c24-b49d-7f910a9361d3",
+        "credentials": {
+          "telegramApi": {
+            "id": "DTKZRv12pT2C8HxF",
+            "name": "Email Campaign"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "3f37c9d1-a272-4370-8ab9-2a26ae34f178",
+                "leftValue": "={{ $json.message.text }}",
+                "rightValue": "Start",
+                "operator": {
+                  "type": "string",
+                  "operation": "regex"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2,
+        "position": [
+          -1760,
+          384
+        ],
+        "id": "5e6dff83-a3c5-4d96-a5b1-85d6180bf023",
+        "name": "If"
+      }
+    ],
+    "connections": {
+      "Read Company Headers & Data": {
+        "main": [
+          [
+            {
+              "node": "Loop Over Items",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Intro Email Field": {
+        "main": [
+          []
+        ]
+      },
+      "Update Status: Sent": {
+        "main": [
+          [
+            {
+              "node": "Rate Limit Processing",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Status: Failed": {
+        "main": [
+          [
+            {
+              "node": "Rate Limit Processing",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Rate Limit Processing": {
+        "main": [
+          [
+            {
+              "node": "Intro Campaign Complete",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Intro Campaign Complete": {
+        "main": [
+          [
+            {
+              "node": "Loop Over Items",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Email Sent Successfully?1": {
+        "main": [
+          [
+            {
+              "node": "Update Status: Sent",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Update Status: Failed",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Simple Memory": {
+        "ai_memory": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_memory",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Google Gemini Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code": {
+        "main": [
+          [
+            {
+              "node": "Switch",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Switch": {
+        "main": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Intro Campaign Complete",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "When clicking ‘Execute workflow’": {
+        "main": [
+          [
+            {
+              "node": "Read Company Headers & Data",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "AI Agent": {
+        "main": [
+          [
+            {
+              "node": "Subject Email Splitter",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_languageModel",
+              "index": 1
+            }
+          ]
+        ]
+      },
+      "Loop Over Items": {
+        "main": [
+          [],
+          [
+            {
+              "node": "Code",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Send Intro Email": {
+        "main": [
+          [
+            {
+              "node": "Email Sent Successfully?1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Subject Email Splitter": {
+        "main": [
+          [
+            {
+              "node": "Send Intro Email",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Normal Text Converter",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Normal Text Converter": {
+        "main": [
+          [
+            {
+              "node": "Update Intro Email Field",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Telegram Trigger": {
+        "main": [
+          [
+            {
+              "node": "If",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "If": {
+        "main": [
+          [
+            {
+              "node": "Read Company Headers & Data",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "pinData": {},
+    "meta": {
+      "templateCredsSetupCompleted": true,
+      "instanceId": "82abb6aab40b26a9c5108257da08a93417ea261bdd662e2bb6e4bf7734dfe8b0"
+    }
+  }
